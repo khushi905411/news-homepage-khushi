@@ -1,4 +1,4 @@
-/* Reset and Base Styles */
+/* Fonts & Reset */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  background-color: #fafafa;
+  background-color: #fff;
   color: #333;
   line-height: 1.6;
 }
@@ -18,188 +18,165 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
 }
 
 .logo {
   font-family: 'Montserrat', sans-serif;
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 900;
-  color: #f15e50;
 }
 
-/* Navigation */
-.desktop-nav ul {
+/* Nav */
+.nav {
   display: flex;
   gap: 2rem;
-  list-style: none;
 }
 
-.desktop-nav a {
+.nav a {
   text-decoration: none;
+  color: #666;
   font-weight: 600;
-  color: #333;
   transition: color 0.3s;
 }
 
-.desktop-nav a:hover {
+.nav a:hover {
   color: #f15e50;
 }
 
-/* Mobile Menu Button */
-.menu-btn {
-  display: none;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #333;
-}
-
-.desktop-nav.active {
-  display: block;
-  margin-top: 1rem;
-}
-
-/* Main Grid Layout */
-.main-grid {
+/* Grid Layout */
+.grid {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
   padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
 .hero img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0.5rem;
 }
 
-.hero-text h1 {
-  font-family: 'Montserrat', sans-serif;
+.hero-content h1 {
   font-size: 2.5rem;
-  margin: 1.5rem 0 1rem;
+  font-weight: 900;
+  font-family: 'Montserrat', sans-serif;
 }
 
-.hero-text p {
-  color: #555;
-  margin-bottom: 1.5rem;
+.hero-content p {
+  font-size: 1rem;
+  margin: 1rem 0;
 }
 
-.read-btn {
-  background: #f15e50;
-  color: white;
-  padding: 0.75rem 1.5rem;
+.hero-content button {
+  padding: 0.7rem 1.5rem;
   border: none;
-  border-radius: 5px;
-  font-weight: bold;
+  background-color: #f15e50;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 1px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
-.read-btn:hover {
-  background: #c74236;
+.hero-content button:hover {
+  background-color: #000;
 }
 
 /* Sidebar */
 .sidebar {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  background-color: #00001a;
+  color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
 }
 
 .sidebar h2 {
-  font-family: 'Montserrat', sans-serif;
-  color: #f15e50;
+  color: #fbbf24;
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.sidebar-item {
-  margin-bottom: 1.5rem;
+.news-item {
+  border-bottom: 1px solid #444;
+  padding: 1rem 0;
 }
 
-.sidebar-item img {
-  width: 100%;
-  border-radius: 8px;
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-item h3 {
+  color: #fff;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
+  cursor: pointer;
 }
 
-.sidebar-item h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
+.news-item h3:hover {
+  color: #fbbf24;
 }
 
-.sidebar-item p {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-/* Articles Section */
-.articles {
-  display: flex;
-  gap: 1.5rem;
-  padding: 0 2rem 2rem;
-  flex-wrap: wrap;
-}
-
-.articles article {
-  background-color: #fff;
-  padding: 1.5rem;
-  border-radius: 10px;
-  flex: 1;
-  min-width: 280px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.articles img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.articles h4 {
-  color: #c5c6ce;
-  font-size: 1.2rem;
-  margin-bottom: 0.25rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.articles h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-}
-
-.articles p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  color: #777;
+.news-item p {
   font-size: 0.9rem;
+  color: #aaa;
 }
 
-/* Responsive Layout */
-@media (max-width: 768px) {
-  .main-grid {
+/* Cards */
+.cards {
+  grid-column: 1 / span 2;
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  display: flex;
+  gap: 1rem;
+  max-width: 300px;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.4rem;
+}
+
+.card h4 {
+  color: #ccc;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.card h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0.3rem 0;
+}
+
+.card p {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid {
     grid-template-columns: 1fr;
   }
-
-  .articles {
+  .cards {
     flex-direction: column;
   }
-
-  .desktop-nav {
-    display: none;
-  }
-
-  .menu-btn {
-    display: block;
+  .card {
+    max-width: 100%;
   }
 }

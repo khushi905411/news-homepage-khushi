@@ -1,7 +1,7 @@
 # Frontend Mentor Challenge – News Homepage
 
 👤 Name: Khushi  
-🧑‍🎓 Student Number: 90541136043
+🧑‍🎓 Student Number: 90541136043  
 🗂️ Challenge: News Homepage  
 
 ## Description
